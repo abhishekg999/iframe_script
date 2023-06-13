@@ -1,2 +1,18 @@
-<html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta charset="UTF-8"><meta content="dark" name="color-scheme"><meta content="origin" name="referrer"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><link href="/manifest?pwa=webhp" crossorigin="use-credentials" rel="manifest"><title>Google</title><script nonce="kf2gXe0AXjiiM11rZRWQCA==">
-</script></head><body></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Read Content of Example.com</title>
+  <script>
+    function readIframeContent() {
+      var iframe = document.getElementById('myIframe');
+      var iframeContent = iframe.contentDocument.body.innerHTML;
+      console.log(iframeContent);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="readIframeContent()">Read Iframe Content</button>
+  <br>
+  <iframe id="myIframe" src="https://typhoonconctf-2023-half-of-fake.chals.io/report"></iframe>
+</body>
+</html>
